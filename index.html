@@ -1,0 +1,222 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.8, maximum-scale=2.0, minimal-ui"/>
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="The Belinos">
+
+<title>The Belinos</title>
+<style>
+@charset "utf-8";
+
+html,
+body 
+{
+  width: 98%;
+  height: 98%;
+}
+
+body 
+{
+  margin: 0;
+  padding: 0;
+  background: #5480da;
+  font: normal 3vmin/6vmin  "Myriad Pro", "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #f2f2f2;
+  text-shadow: 2px 2px 1px #0d0d0d;
+  -webkit-text-size-adjust: none;
+}
+
+a 
+{
+  margin: 0;
+  padding: 0;
+  font: normal 3vmin/6vmin "Myriad Pro", "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  -webkit-text-size-adjust: none;
+  color: #f2f2f2;
+  text-shadow: 0px 0px;
+}
+
+/* mouse over link */
+a:hover {
+    color: #b3b3ff;
+}
+
+h1
+{
+  margin-left: 3vw;
+  font: bold 6vmin/14vmin "Myriad Pro", "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+
+.photo-container
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30vh; width: 80vw;
+  margin-top: 2vh;
+  margin-left: 10vw;
+  text-align: center;
+  vertical-align:middle;
+}
+
+.text-container
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 40vh; width: 80vw;
+  margin-left: 10vw;
+  vertical-align:middle;
+  letter-spacing: 0.02em;
+}
+
+.social-buttons
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 20vh; width: 80vw;
+  margin-left: 10vw;
+  vertical-align:middle;
+  letter-spacing: 0.02em;
+}
+
+.button
+{
+  margin-right: 3vw;
+  vertical-align:middle;
+  display: inline-block;
+  font-size:4vmin;
+}
+
+.footer
+{
+  display: flex;
+  align-items: center;
+  height: 5vh; width: 80vw;
+  margin-left: 10vw;
+  letter-spacing: 0.02em;
+}
+
+@media only screen and (max-width: 640px) {
+body 
+{
+  font: normal 5vmin/10vmin "Myriad Pro", "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+}    
+    
+.photo-container
+{
+  justify-content: center;
+  height: 30vh; width: 90vw;
+  margin-left: 5vw;
+}
+
+.text-container
+{
+  justify-content: center;
+  height: 35vh; width: 90vw;
+  margin-left: 5vw;
+}
+
+.social-buttons
+{
+  justify-content: center;
+  height: 25vh; width: 90vw;
+  margin-left: 5vw;
+}
+
+.button
+{
+  font-size:8vmin;
+}
+
+}
+</style>
+</head>
+<body>
+<div class="photo-container">  
+    <img class="vk_photo" style="border-radius: 50%;height: 55%;border: 2px solid black;">
+	<script>
+	$.getJSON('https://api.vk.com/method/users.get?user_ids=thebelinos&fields=photo_200&v=5.8&callback=?', 
+					function(resp){
+						$(".vk_photo").attr("src", resp.response[0].photo_200);
+					});
+	</script>
+	<h1>The&nbsp;Belinos</h1>
+</div>
+<div class="text-container">
+    <p>
+        Hello, world <br/>
+        I'm a PL/SQL Developer <br/>
+        I love to play games \o/ <br/>
+        Watch TV series <br/>
+		And listen to good music <br/><br/>
+        Social buttons:
+    </p>
+</div>
+
+<div class="social-buttons"><p>
+    <a href="https://vk.com/thebelinos" target="_blank" class="button">
+        <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-vk fa-stack-1x fa-inverse" style="color:#5480da;"></i>
+        </span></a>
+    <a href="https://www.instagram.com/thebelinos/" target="_blank" class="button">
+        <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse" style="color:#5480da;"></i>
+        </span></a>
+    <a href="https://twitter.com/thebelinos" target="_blank" class="button">
+        <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse" style="color:#5480da;"></i>
+        </span></a>
+    <a href="mailto:belinos11@gmail.com" target="_blank" class="button">
+        <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse" style="color:#5480da;"></i>
+        </span></a>
+    </p>
+</div>
+
+<div class="footer" style="color=#000;font-size:1.8vmin;justify-content:flex-end;">
+	Powered by Amazon © 2017 
+</div>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter46986633 = new Ya.Metrika({
+                    id:46986633,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/46986633" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
