@@ -144,7 +144,7 @@ body
     <img class="vk_photo" style="border-radius: 50%;height: 55%;border: 2px solid black;">
 	<script>
 	var service_token = '1fc970931fc970931fc97093681f8587e511fc91fc9709346dc0034e30347267a7ff364';
-	$.getJSON('https://api.vk.com/method/users.get?access_token='+service_token+'&user_ids=thebelinos&fields=photo_200&v=5.8&callback=?', 
+	$.getJSON('https://api.vk.com/method/users.get?access_token='+this.service_token+'&user_ids=thebelinos&fields=photo_200&v=5.8&callback=?', 
 					function(resp){
 						$(".vk_photo").attr("src", resp.response[0].photo_200);
 					});
