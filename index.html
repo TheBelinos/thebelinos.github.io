@@ -27,7 +27,7 @@ body
   background: #5480da;
   font: normal 3vmin/6vmin  "Myriad Pro", "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: #f2f2f2;
-  text-shadow: 2px 2px 1px #0d0d0d;
+  text-shadow: 0 0 0.1em black, 0 0 0.2em black, 0 0 0.3em black, 0 0 0.4em black, 0 0 0.5em black;
   -webkit-text-size-adjust: none;
   background-image: url(img/898660948.jpg)
 }
@@ -143,13 +143,6 @@ body
 <body>
 <div class="photo-container">  
     <img class="vk_photo" style="border-radius: 50%;height: 55%;border: 2px solid black;" src="img/zGykTpqz_400x400.jpg">
-	<!--<script>
-	var service_token = '1fc970931fc970931fc97093681f8587e511fc91fc9709346dc0034e30347267a7ff364';
-	$.getJSON('https://api.vk.com/method/users.get?access_token='+this.service_token+'&user_ids=thebelinos&fields=photo_200&v=5.8&callback=?', 
-					function(resp){
-						$(".vk_photo").attr("src", resp.response[0].photo_200);
-					});
-	</script>-->
 	<h1>The&nbsp;Belinos</h1>
 </div>
 <div class="text-container">
@@ -159,30 +152,24 @@ body
         I love to play games \o/ <br/>
         Watch TV series <br/>
 		And listen to good music <br/><br/>
-        Social buttons:
     </p>
 </div>
 
 <div class="social-buttons"><p>
-    <!--<a href="https://vk.com/thebelinos" target="_blank" class="button">
-        <span class="fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-vk fa-stack-1x fa-inverse" style="color:#5480da;"></i>
-        </span></a>-->
     <a href="https://www.instagram.com/thebelinos/" target="_blank" class="button">
         <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-instagram fa-stack-1x fa-inverse" style="color:#5480da;"></i>
+            <i class="fa fa-instagram fa-stack-1x" style="color:#000;"></i>
         </span></a>
     <a href="https://twitter.com/thebelinos" target="_blank" class="button">
         <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-twitter fa-stack-1x fa-inverse" style="color:#5480da;"></i>
+            <i class="fa fa-twitter fa-stack-1x" style="color:#000;"></i>
         </span></a>
     <a href="mailto:belinos11@gmail.com" target="_blank" class="button">
         <span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-envelope fa-stack-1x fa-inverse" style="color:#5480da;"></i>
+            <i class="fa fa-envelope-o fa-stack-1x" style="color:#000;"></i>
         </span></a>
     </p>
 </div>
@@ -190,35 +177,6 @@ body
 <div class="footer" style="color=#000;font-size:1.8vmin;justify-content:flex-end;">
 	GitHub Pages
 </div>
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter46986633 = new Ya.Metrika({
-                    id:46986633,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true
-                });
-            } catch(e) { }
-        });
-
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/46986633" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
 
 </body>
 </html>
