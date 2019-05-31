@@ -115,7 +115,7 @@ box-shadow: 0 0 0.5em coral, 0 0 3.5em coral;
 @media only screen and (max-width: 640px) {
 body 
 {
-  font: normal 5vmin/10vmin "Myriad Pro", "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font: normal 4.5vmin/9vmin "Myriad Pro", "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
 }    
     
 .photo-container
@@ -137,11 +137,12 @@ body
   justify-content: center;
   height: 20vh; width: 90vw;
   margin-left: 5vw;
+  
 }
 
 .button
 {
-  font-size:8vmin;
+  font-size:7vmin;
 }
 
 
@@ -155,11 +156,10 @@ body
 </div>
 <div class="text-container">
     <p>
-        Привет, я Андрей, мне <?php echo date_diff(date_create("20-09-1993"), date_create('now'))->y;?>. \o/<br/>
+        Привет, я Андрей, мне <span id="age"></span>. \o/<br/>
         Я разработчик Oracle PL/SQL, немного знаю html/css. <br/>
 		Могу писать на Java через гугление и боль. <br/>
-		Играю в игры, смотрю сериалы. <br/>
-		Создал страницу Fortnite в русской Википедии &#128526;<br/><br/>
+		Играю в игры, смотрю сериалы. &#128526;<br/><br/>
     </p>
 </div>
 
@@ -205,18 +205,22 @@ body
 				<i class="far fa-address-card fa-stack-1x" style="color: #333;"></i>
 			</span>
 		</a>
-		
-		<a href="mailto:belinos11@gmail.com" target="_blank" class="button">
-			<span class="fa-stack" 
-				onmouseover="this.getElementsByClassName('far fa-envelope fa-stack-1x')[0].style.color = 'coral'"; 
-				onmouseout="this.getElementsByClassName('far fa-envelope fa-stack-1x')[0].style.color = '#333'";
-				onClick="this.getElementsByClassName('far fa-envelope fa-stack-1x')[0].style.color = '#333'";>
-				<i class="fas fa-circle fa-stack-2x" style="color:white;"></i>
-				<i class="far fa-envelope fa-stack-1x" style="color: #333;"></i>
-			</span>
-		</a>
     </p>	
 </div>
 
+
+<script type='text/javascript'>
+function getAge(DOB) {
+	var today = new Date();
+	var birthDate = new Date(DOB);
+	var age = today.getFullYear() - birthDate.getFullYear();
+	var m = today.getMonth() - birthDate.getMonth();
+	if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+		age = age - 1;
+	}
+	return age;
+}
+document.getElementById('age').innerHTML = getAge("09-20-1993");
+ </script>
 </body>
 </html>
