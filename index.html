@@ -1,6 +1,7 @@
 <html>
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/v4-shims.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.8, maximum-scale=2.0, minimal-ui"/>
@@ -108,7 +109,7 @@ box-shadow: 0 0 0.5em coral, 0 0 3.5em coral;
 
 .fa-stack-2x
 {
-  text-shadow: 0 0 0.3em coral;
+  text-shadow: 0 0 0.25em coral, 0 0 0.5em coral;
 }
 
 @media only screen and (max-width: 640px) {
@@ -154,52 +155,66 @@ body
 </div>
 <div class="text-container">
     <p>
-        Hello, world <br/>
-        I'm a PL/SQL Developer <br/>
-        I love to play games \o/ <br/>
-        Watch TV series <br/>
-		And listen to good music <br/><br/>
+        Привет, я Андрей, мне <?php echo date_diff(date_create("20-09-1993"), date_create('now'))->y;?>. \o/<br/>
+        Я разработчик Oracle PL/SQL, немного знаю html/css. <br/>
+		Могу писать на Java через гугление и боль. <br/>
+		Играю в игры, смотрю сериалы. <br/>
+		Создал страницу Fortnite в русской Википедии &#128526;<br/><br/>
     </p>
 </div>
 
-<div class="social-buttons"><p>
-
-    <a href="https://t.me/thebelinos" target="_blank" class="button">
-        <span class="fa-stack" 
-			onmouseover="this.getElementsByClassName('fa fa-circle fa-stack-1x')[0].style.color = 'coral'"; 
-			onmouseout="this.getElementsByClassName('fa fa-circle fa-stack-1x')[0].style.color = '#333'";>
-            <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
-			<i class="fa fa-circle fa-stack-1x" style="color: #333;" ></i>
-            <i class="fa fa-telegram fa-stack-1x fa-lg" style="color: white;"></i>
-        </span>
-	</a>
-	
-    <a href="https://www.instagram.com/thebelinos/" target="_blank" class="button">
-        <span class="fa-stack" 
-			onmouseover="this.getElementsByClassName('fa fa-instagram fa-stack-1x')[0].style.color = 'coral'"; 
-			onmouseout="this.getElementsByClassName('fa fa-instagram fa-stack-1x')[0].style.color = '#333'";>
-            <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
-            <i class="fa fa-instagram fa-stack-1x" style="color: #333;"></i>
-        </span>
-	</a>
-	
-    <a href="https://twitter.com/thebelinos" target="_blank" class="button">
-        <span class="fa-stack" 
-			onmouseover="this.getElementsByClassName('fa fa-twitter fa-stack-1x')[0].style.color = 'coral'"; 
-			onmouseout="this.getElementsByClassName('fa fa-twitter fa-stack-1x')[0].style.color = '#333'";>
-            <i class="fa fa-circle fa-stack-2x" style="color:white;"></i>
-            <i class="fa fa-twitter fa-stack-1x" style="color: #333;"></i>
-        </span>
-	</a>
-	
-    <a href="mailto:belinos11@gmail.com" target="_blank" class="button">
-        <span class="fa-stack" 
-			onmouseover="this.getElementsByClassName('fa fa-envelope-o fa-stack-1x')[0].style.color = 'coral'"; 
-			onmouseout="this.getElementsByClassName('fa fa-envelope-o fa-stack-1x')[0].style.color = '#333'";>
-            <i class="fa fa-circle fa-stack-2x" style="color:white;"></i>
-            <i class="fa fa-envelope-o fa-stack-1x" style="color: #333;"></i>
-        </span>
-	</a>
+<div class="social-buttons">
+	<p>
+		<a href="https://t.me/thebelinos" target="_blank" class="button">
+			<span class="fa-stack" 
+				onmouseover="this.getElementsByClassName('fas fa-circle fa-stack-1x')[0].style.color = 'coral'"; 
+				onmouseout="this.getElementsByClassName('fas fa-circle fa-stack-1x')[0].style.color = '#333'";
+				onClick="this.getElementsByClassName('fas fa-circle fa-stack-1x')[0].style.color = '#333'";>
+				<i class="fas fa-circle fa-stack-2x" style="color: white;"></i>
+				<i class="fas fa-circle fa-stack-1x" style="color: #333;" ></i>
+				<i class="fab fa-telegram fa-stack-1x fa-lg" style="color: white;"></i>
+			</span>
+		</a>
+		
+		<a href="https://www.instagram.com/thebelinos/" target="_blank" class="button">
+			<span class="fa-stack" 
+				onmouseover="this.getElementsByClassName('fab fa-instagram fa-stack-1x')[0].style.color = 'coral'"; 
+				onmouseout="this.getElementsByClassName('fab fa-instagram fa-stack-1x')[0].style.color = '#333'";
+				onClick="this.getElementsByClassName('fab fa-instagram fa-stack-1x')[0].style.color = '#333'";>
+				<i class="fas fa-circle fa-stack-2x" style="color: white;"></i>
+				<i class="fab fa-instagram fa-stack-1x" style="color: #333;"></i>
+			</span>
+		</a>
+		
+		<a href="https://twitter.com/thebelinos" target="_blank" class="button">
+			<span class="fa-stack" 
+				onmouseover="this.getElementsByClassName('fab fa-twitter fa-stack-1x')[0].style.color = 'coral'"; 
+				onmouseout="this.getElementsByClassName('fab fa-twitter fa-stack-1x')[0].style.color = '#333'";
+				onClick="this.getElementsByClassName('fab fa-twitter fa-stack-1x')[0].style.color = '#333'";>
+				<i class="fas fa-circle fa-stack-2x" style="color:white;"></i>
+				<i class="fab fa-twitter fa-stack-1x" style="color: #333;"></i>
+			</span>
+		</a>
+		
+		<a href="https://hh.ru/resume/350c9544ff071024ba0039ed1f6774774a4f41" target="_blank" class="button">
+		<span class="fa-stack" 
+				onmouseover="this.getElementsByClassName('far fa-address-card fa-stack-1x')[0].style.color = 'coral'"; 
+				onmouseout="this.getElementsByClassName('far fa-address-card fa-stack-1x')[0].style.color = '#333'";
+				onClick="this.getElementsByClassName('far fa-address-card fa-stack-1x')[0].style.color = '#333'";>
+				<i class="fas fa-circle fa-stack-2x" style="color:white;"></i>
+				<i class="far fa-address-card fa-stack-1x" style="color: #333;"></i>
+			</span>
+		</a>
+		
+		<a href="mailto:belinos11@gmail.com" target="_blank" class="button">
+			<span class="fa-stack" 
+				onmouseover="this.getElementsByClassName('far fa-envelope fa-stack-1x')[0].style.color = 'coral'"; 
+				onmouseout="this.getElementsByClassName('far fa-envelope fa-stack-1x')[0].style.color = '#333'";
+				onClick="this.getElementsByClassName('far fa-envelope fa-stack-1x')[0].style.color = '#333'";>
+				<i class="fas fa-circle fa-stack-2x" style="color:white;"></i>
+				<i class="far fa-envelope fa-stack-1x" style="color: #333;"></i>
+			</span>
+		</a>
     </p>	
 </div>
 
