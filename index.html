@@ -24,35 +24,38 @@ body
 {
   margin: 0;
   padding: 0;
-  
   font: normal 3vmin/6vmin  "Myriad Pro", "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: white;
-  text-shadow: 0 0 0.1em black, 0 0 0.2em black, 0 0 0.3em black, 0 0 0.4em black, 0 0 0.5em black;
+  text-shadow: 0 0 0.5em #000;
   -webkit-text-size-adjust: none;
-  background: coral;
+  background: #333;
+  text-decoration: none;
 }
 
 a 
 {
   margin: 0;
   padding: 0;
-  font: normal 3vmin/6vmin "Myriad Pro", "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font: normal 1.8vmin/3.6	vmin "Myriad Pro", "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-shadow: none;
   -webkit-text-size-adjust: none;
   color: #f2f2f2;
-  text-shadow: 0px 0px;
 }
 
-/* mouse over link */
 a:hover {
-    color: #b3b3ff;
+	color: coral;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 h1
 {
   margin-left: 3vw;
   font: bold 6vmin/14vmin "Myriad Pro", "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-shadow: 0 0 0.5em coral;
 }
-
 
 .photo-container
 {
@@ -64,6 +67,7 @@ h1
   margin-left: 10vw;
   text-align: center;
   vertical-align:middle;
+  text-shadow: 0 0 0.3em coral;
 }
 
 .text-container
@@ -96,13 +100,9 @@ h1
   font-size:4vmin;
 }
 
-.footer
+.fa-stack-2x
 {
-  display: flex;
-  align-items: center;
-  height: 1vh; width: 80vw;
-  margin-left: 10vw;
-  letter-spacing: 0.02em;
+  text-shadow: 0 0 0.3em coral;
 }
 
 @media only screen and (max-width: 640px) {
@@ -137,12 +137,13 @@ body
   font-size:8vmin;
 }
 
+
 }
 </style>
 </head>
 <body>
 <div class="photo-container">  
-    <img class="photo" style="border-radius: 50%;height: 55%;" src="img/gtU2H2He6Yg1.jpg">
+    <img class="photo" style="border-radius: 50%;height: 55%;" src="img/gtU2H2He6Yg1.jpg" alt="фото">
 	<h1>The&nbsp;Belinos</h1>
 </div>
 <div class="text-container">
@@ -156,32 +157,45 @@ body
 </div>
 
 <div class="social-buttons"><p>
+
     <a href="https://t.me/thebelinos" target="_blank" class="button">
-        <span class="fa-stack">
+        <span class="fa-stack" 
+			onmouseover="this.getElementsByClassName('fa fa-circle fa-stack-1x')[0].style.color = 'coral'"; 
+			onmouseout="this.getElementsByClassName('fa fa-circle fa-stack-1x')[0].style.color = '#333'";>
             <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
-			<i class="fa fa-circle fa-stack-1x" style="color: coral;"></i>
+			<i class="fa fa-circle fa-stack-1x" style="color: #333;" ></i>
             <i class="fa fa-telegram fa-stack-1x fa-lg" style="color: white;"></i>
-        </span></a>
+        </span>
+	</a>
+	
     <a href="https://www.instagram.com/thebelinos/" target="_blank" class="button">
-        <span class="fa-stack">
+        <span class="fa-stack" 
+			onmouseover="this.getElementsByClassName('fa fa-instagram fa-stack-1x')[0].style.color = 'coral'"; 
+			onmouseout="this.getElementsByClassName('fa fa-instagram fa-stack-1x')[0].style.color = '#333'";>
             <i class="fa fa-circle fa-stack-2x" style="color: white;"></i>
-            <i class="fa fa-instagram fa-stack-1x" style="color: coral;"></i>
-        </span></a>
+            <i class="fa fa-instagram fa-stack-1x" style="color: #333;"></i>
+        </span>
+	</a>
+	
     <a href="https://twitter.com/thebelinos" target="_blank" class="button">
-        <span class="fa-stack">
+        <span class="fa-stack" 
+			onmouseover="this.getElementsByClassName('fa fa-twitter fa-stack-1x')[0].style.color = 'coral'"; 
+			onmouseout="this.getElementsByClassName('fa fa-twitter fa-stack-1x')[0].style.color = '#333'";>
             <i class="fa fa-circle fa-stack-2x" style="color:white;"></i>
-            <i class="fa fa-twitter fa-stack-1x" style="color: coral;"></i>
-        </span></a>
+            <i class="fa fa-twitter fa-stack-1x" style="color: #333;"></i>
+        </span>
+	</a>
+	
     <a href="mailto:belinos11@gmail.com" target="_blank" class="button">
-        <span class="fa-stack">
+        <span class="fa-stack" 
+			onmouseover="this.getElementsByClassName('fa fa-envelope-o fa-stack-1x')[0].style.color = 'coral'"; 
+			onmouseout="this.getElementsByClassName('fa fa-envelope-o fa-stack-1x')[0].style.color = '#333'";>
             <i class="fa fa-circle fa-stack-2x" style="color:white;"></i>
-            <i class="fa fa-envelope-o fa-stack-1x" style="color: coral;"></i>
-        </span></a>
-    </p>
+            <i class="fa fa-envelope-o fa-stack-1x" style="color: #333;"></i>
+        </span>
+	</a>
+    </p>	
 </div>
 
-<div class="footer" style="color=#000;font-size:1.8vmin;justify-content:flex-end;">
-	GitHub Pages
-</div>
 </body>
 </html>
